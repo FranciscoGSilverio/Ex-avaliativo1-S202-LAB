@@ -1,0 +1,63 @@
+{
+    "$jsonSchema": {
+      "bsonType": "object",
+      "required": [
+        "nota",
+        "corridas"
+      ],
+      "properties": {
+        "nota": {
+          "bsonType": "int",
+          "minimum": 0,
+          "maximum": 10,
+          "description": "Nota deve ser um inteiro entre 0 e 10"
+        },
+        "corridas": {
+          "bsonType": "array",
+          "items": {
+            "bsonType": "object",
+            "required": [
+              "nota",
+              "valor",
+              "distancia",
+              "passageiro"
+            ],
+            "properties": {
+              "nota": {
+                "bsonType": "int",
+                "minimum": 0,
+                "maximum": 10,
+                "description": "Nota é um número inteiro obrigatório"
+              },
+              "valor": {
+                "bsonType": "double",
+                "description": "Valor é um número decimal obrigatório"
+              },
+              "distancia": {
+                "bsonType": "double",
+                "description": "Distância é um número decimal obrigatório"
+              },
+              "passageiro": {
+                "bsonType": "object",
+                "required": [
+                  "nome",
+                  "documento"
+                ],
+                "properties": {
+                  "nome": {
+                    "bsonType": "string",
+                    "description": "Nome do passageiro é obrigatório"
+                  },
+                  "documento": {
+                    "bsonType": "string",
+                    "description": "Documento do passageiro é obrigatório"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
